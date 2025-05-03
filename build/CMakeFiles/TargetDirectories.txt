@@ -1,0 +1,4 @@
+/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/binarization_app.dir
+/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/edit_cache.dir
+/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/rebuild_cache.dir
+/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/binarization_app_autogen.dir

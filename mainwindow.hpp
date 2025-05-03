@@ -25,6 +25,7 @@ class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QImage matToQImage(const cv::Mat &mat);
 private slots:
     void loadImage();
     void updateManualThresholds();
