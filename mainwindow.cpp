@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     sliderR    = new QSlider(Qt::Horizontal, this);
     sliderG    = new QSlider(Qt::Horizontal, this);
     sliderB    = new QSlider(Qt::Horizontal, this);
+    btnLoad    = new QPushButton("Load Image", this);
     btnManual  = new QPushButton("Manual", this);
     btnAuto    = new QPushButton("Auto", this);
 
@@ -39,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 3) Układ
     auto *controlsLayout = new QHBoxLayout;
+    controlsLayout->addWidget(btnLoad);
     controlsLayout->addWidget(sliderR);
     controlsLayout->addWidget(sliderG);
     controlsLayout->addWidget(sliderB);
@@ -54,6 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
     setCentralWidget(central);
 
     //laczenie sygnalow
+    connect(btnLoad, &QPushButton::clicked, this, &QMainWindow::loadImage);
     connect(sliderR, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
     connect(sliderG, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
     connect(sliderB, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
