@@ -1,6 +1,6 @@
 #include "mainwindow.hpp"
 #include <QDebug>
-#include <QGraphicsView>   
+#include <QGraphicsView>
 
 
 QImage MainWindow::matToQImage(const cv::Mat &mat) {
@@ -71,31 +71,38 @@ MainWindow::MainWindow(QWidget *parent)
     btnAuto->setEnabled(false);
 
     //laczenie sygnalow
+    throttleTimer = new QTimer(this);
+    throttleTimer->setSingleShot(true);
+    throttleTimer->setInterval(100);
+    connect(throttleTimer, &QTimer::timeout, this, &MainWindow::updateManualThresholds);
     connect(btnLoad,  &QPushButton::clicked, this, &MainWindow::loadImage);           // :contentReference[oaicite:2]{index=2}
-    connect(sliderR,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
-    connect(sliderG,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
-    connect(sliderB,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
+    connect(sliderR, &QSlider::valueChanged, throttleTimer, static_cast<void(QTimer::*)()>(&QTimer::start));
+    connect(sliderG, &QSlider::valueChanged, throttleTimer, static_cast<void(QTimer::*)()>(&QTimer::start));
+    connect(sliderB, &QSlider::valueChanged, throttleTimer, static_cast<void(QTimer::*)()>(&QTimer::start));
     connect(btnAuto,  &QPushButton::clicked, this, &MainWindow::computeAutoThresholds);
+    connect(&watcher, &QFutureWatcher<cv::Mat>::finished, this, [this]() {
+        processed = watcher.result();
+        displayMat(processed);
+    });
 }
 
 MainWindow::~MainWindow() { }
 
 void MainWindow::updateManualThresholds() {
-    if (src.empty()) {
-        return;
-    }    
-    int tR = sliderR->value(), tG = sliderG->value(), tB = sliderB->value();
-    labelR->setText(QString("R: %1").arg(tR));
-    labelG->setText(QString("G: %1").arg(tG));
-    labelB->setText(QString("B: %1").arg(tB));
-    cv::Mat mask;
-    cv::inRange(src,
-                cv::Scalar(tB, tG, tR),
-                cv::Scalar(255,255,255),
-                mask);
-    cv::bitwise_and(src, src, processed, mask);
-    displayMat(processed);
+    if (src.empty()) return;
+    int r=sliderR->value(), g=sliderG->value(), b=sliderB->value();
+    labelR->setText(QString("R:%1").arg(r));
+    labelG->setText(QString("G:%1").arg(g));
+    labelB->setText(QString("B:%1").arg(b));
+    cv::Mat input = src.clone();
+    watcher.setFuture(QtConcurrent::run([=]() {
+        cv::Mat mask, out;
+        cv::inRange(input, cv::Scalar(b,g,r), cv::Scalar(255,255,255), mask);
+        cv::bitwise_and(input, input, out, mask);
+        return out;
+    }));
 }
+
 
 void MainWindow::computeAutoThresholds() {
     if (src.empty()) {

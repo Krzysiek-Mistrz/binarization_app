@@ -8,6 +8,9 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QFileDialog>
+#include <QTimer>
+#include <QtConcurrent/QtConcurrent>
+#include <QFutureWatcher>
 #include <QImage>
 #include <QPixmap>
 #include <opencv2/opencv.hpp>
@@ -36,6 +39,8 @@ private:
     QSlider *sliderR, *sliderG, *sliderB;
     QLabel *labelR, *labelG, *labelB;
     QPushButton *btnManual, *btnAuto, *btnLoad;
+    QTimer *throttleTimer;
+    QFutureWatcher<cv::Mat> watcher;
     void displayMat(const cv::Mat &mat);
 };
 
