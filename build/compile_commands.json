@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build",
+  "command": "/usr/bin/c++ -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/include -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/include -isystem /usr/local/include/opencv4 -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtConcurrent -fPIC -std=gnu++17 -o CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/mocs_compilation.cpp",
+  "file": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build",
+  "command": "/usr/bin/c++ -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/include -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/include -isystem /usr/local/include/opencv4 -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtConcurrent -fPIC -std=gnu++17 -o CMakeFiles/binarization_app.dir/src/main.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp",
+  "file": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp"
+},
+{
+  "directory": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build",
+  "command": "/usr/bin/c++ -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/include -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/include -isystem /usr/local/include/opencv4 -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtConcurrent -fPIC -std=gnu++17 -o CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp",
+  "file": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp"
+},
+{
+  "directory": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build",
+  "command": "/usr/bin/c++ -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/include -I/home/krzychu/Documents/Programowanie/projekty/binarization_app/include -isystem /usr/local/include/opencv4 -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtConcurrent -fPIC -std=gnu++17 -o CMakeFiles/binarization_app.dir/qrc_resources.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp",
+  "file": "/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp"
+}
+]
