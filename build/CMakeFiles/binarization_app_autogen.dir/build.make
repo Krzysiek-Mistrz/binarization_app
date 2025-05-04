@@ -67,7 +67,7 @@ include CMakeFiles/binarization_app_autogen.dir/compiler_depend.make
 include CMakeFiles/binarization_app_autogen.dir/progress.make
 
 CMakeFiles/binarization_app_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target binarization_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target binarization_app"
 	/usr/bin/cmake -E cmake_autogen /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/binarization_app_autogen.dir/AutogenInfo.json ""
 
 binarization_app_autogen: CMakeFiles/binarization_app_autogen

@@ -69,10 +69,16 @@ include CMakeFiles/binarization_app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/binarization_app.dir/flags.make
 
+qrc_resources.cpp: /home/krzychu/Documents/Programowanie/projekty/binarization_app/resources/resources.qrc
+qrc_resources.cpp: /home/krzychu/Documents/Programowanie/projekty/binarization_app/resources/style.qss
+qrc_resources.cpp: resources/resources.qrc.depends
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	/usr/lib/qt5/bin/rcc --name resources --output /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp /home/krzychu/Documents/Programowanie/projekty/binarization_app/resources/resources.qrc
+
 CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o: CMakeFiles/binarization_app.dir/flags.make
 CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o: binarization_app_autogen/mocs_compilation.cpp
 CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o -MF CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/mocs_compilation.cpp
 
 CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.i: cmake_force
@@ -83,48 +89,65 @@ CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/mocs_compilation.cpp -o CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/binarization_app.dir/main.cpp.o: CMakeFiles/binarization_app.dir/flags.make
-CMakeFiles/binarization_app.dir/main.cpp.o: /home/krzychu/Documents/Programowanie/projekty/binarization_app/main.cpp
-CMakeFiles/binarization_app.dir/main.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/binarization_app.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/main.cpp.o -MF CMakeFiles/binarization_app.dir/main.cpp.o.d -o CMakeFiles/binarization_app.dir/main.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/main.cpp
+CMakeFiles/binarization_app.dir/src/main.cpp.o: CMakeFiles/binarization_app.dir/flags.make
+CMakeFiles/binarization_app.dir/src/main.cpp.o: /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp
+CMakeFiles/binarization_app.dir/src/main.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/binarization_app.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/src/main.cpp.o -MF CMakeFiles/binarization_app.dir/src/main.cpp.o.d -o CMakeFiles/binarization_app.dir/src/main.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp
 
-CMakeFiles/binarization_app.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/binarization_app.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzychu/Documents/Programowanie/projekty/binarization_app/main.cpp > CMakeFiles/binarization_app.dir/main.cpp.i
+CMakeFiles/binarization_app.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/binarization_app.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp > CMakeFiles/binarization_app.dir/src/main.cpp.i
 
-CMakeFiles/binarization_app.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/main.cpp -o CMakeFiles/binarization_app.dir/main.cpp.s
+CMakeFiles/binarization_app.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/main.cpp -o CMakeFiles/binarization_app.dir/src/main.cpp.s
 
-CMakeFiles/binarization_app.dir/mainwindow.cpp.o: CMakeFiles/binarization_app.dir/flags.make
-CMakeFiles/binarization_app.dir/mainwindow.cpp.o: /home/krzychu/Documents/Programowanie/projekty/binarization_app/mainwindow.cpp
-CMakeFiles/binarization_app.dir/mainwindow.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/binarization_app.dir/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/mainwindow.cpp.o -MF CMakeFiles/binarization_app.dir/mainwindow.cpp.o.d -o CMakeFiles/binarization_app.dir/mainwindow.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/mainwindow.cpp
+CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o: CMakeFiles/binarization_app.dir/flags.make
+CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o: /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp
+CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o -MF CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o.d -o CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp
 
-CMakeFiles/binarization_app.dir/mainwindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/binarization_app.dir/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzychu/Documents/Programowanie/projekty/binarization_app/mainwindow.cpp > CMakeFiles/binarization_app.dir/mainwindow.cpp.i
+CMakeFiles/binarization_app.dir/src/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/binarization_app.dir/src/mainwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp > CMakeFiles/binarization_app.dir/src/mainwindow.cpp.i
 
-CMakeFiles/binarization_app.dir/mainwindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/mainwindow.cpp -o CMakeFiles/binarization_app.dir/mainwindow.cpp.s
+CMakeFiles/binarization_app.dir/src/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/src/mainwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/src/mainwindow.cpp -o CMakeFiles/binarization_app.dir/src/mainwindow.cpp.s
+
+CMakeFiles/binarization_app.dir/qrc_resources.cpp.o: CMakeFiles/binarization_app.dir/flags.make
+CMakeFiles/binarization_app.dir/qrc_resources.cpp.o: qrc_resources.cpp
+CMakeFiles/binarization_app.dir/qrc_resources.cpp.o: CMakeFiles/binarization_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/binarization_app.dir/qrc_resources.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/binarization_app.dir/qrc_resources.cpp.o -MF CMakeFiles/binarization_app.dir/qrc_resources.cpp.o.d -o CMakeFiles/binarization_app.dir/qrc_resources.cpp.o -c /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp
+
+CMakeFiles/binarization_app.dir/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/binarization_app.dir/qrc_resources.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp > CMakeFiles/binarization_app.dir/qrc_resources.cpp.i
+
+CMakeFiles/binarization_app.dir/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/binarization_app.dir/qrc_resources.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/qrc_resources.cpp -o CMakeFiles/binarization_app.dir/qrc_resources.cpp.s
 
 # Object files for target binarization_app
 binarization_app_OBJECTS = \
 "CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/binarization_app.dir/main.cpp.o" \
-"CMakeFiles/binarization_app.dir/mainwindow.cpp.o"
+"CMakeFiles/binarization_app.dir/src/main.cpp.o" \
+"CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o" \
+"CMakeFiles/binarization_app.dir/qrc_resources.cpp.o"
 
 # External object files for target binarization_app
 binarization_app_EXTERNAL_OBJECTS =
 
 binarization_app: CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o
-binarization_app: CMakeFiles/binarization_app.dir/main.cpp.o
-binarization_app: CMakeFiles/binarization_app.dir/mainwindow.cpp.o
+binarization_app: CMakeFiles/binarization_app.dir/src/main.cpp.o
+binarization_app: CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o
+binarization_app: CMakeFiles/binarization_app.dir/qrc_resources.cpp.o
 binarization_app: CMakeFiles/binarization_app.dir/build.make
 binarization_app: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
+binarization_app: /usr/lib/x86_64-linux-gnu/libQt5Concurrent.so.5.15.3
 binarization_app: /usr/local/lib/libopencv_gapi.so.4.10.0
 binarization_app: /usr/local/lib/libopencv_stitching.so.4.10.0
 binarization_app: /usr/local/lib/libopencv_alphamat.so.4.10.0
@@ -183,7 +206,7 @@ binarization_app: /usr/local/lib/libopencv_photo.so.4.10.0
 binarization_app: /usr/local/lib/libopencv_imgproc.so.4.10.0
 binarization_app: /usr/local/lib/libopencv_core.so.4.10.0
 binarization_app: CMakeFiles/binarization_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable binarization_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable binarization_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/binarization_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -194,7 +217,7 @@ CMakeFiles/binarization_app.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/binarization_app.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/binarization_app.dir/clean
 
-CMakeFiles/binarization_app.dir/depend:
+CMakeFiles/binarization_app.dir/depend: qrc_resources.cpp
 	cd /home/krzychu/Documents/Programowanie/projekty/binarization_app/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/krzychu/Documents/Programowanie/projekty/binarization_app /home/krzychu/Documents/Programowanie/projekty/binarization_app /home/krzychu/Documents/Programowanie/projekty/binarization_app/build /home/krzychu/Documents/Programowanie/projekty/binarization_app/build /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/CMakeFiles/binarization_app.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/binarization_app.dir/depend
 

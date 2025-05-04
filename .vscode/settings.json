@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "qpushbutton": "cpp"
+        "qpushbutton": "cpp",
+        "qtconcurrent": "cpp"
     }
 }

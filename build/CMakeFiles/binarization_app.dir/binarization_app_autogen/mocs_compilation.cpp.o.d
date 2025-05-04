@@ -1,7 +1,7 @@
 CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o: \
  /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/6YEA5652QU/moc_mainwindow.cpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -117,7 +117,7 @@ CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o:
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/EWIEGA46WW/../../../mainwindow.hpp \
+ /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/6YEA5652QU/../../../include/mainwindow.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -756,7 +756,4 @@ CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.o:
  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
- /usr/local/include/opencv4/opencv2/core/core.hpp \
- /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
- /usr/local/include/opencv4/opencv2/highgui/highgui.hpp
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp

@@ -166,53 +166,77 @@ binarization_app_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/binarization_app_autogen/mocs_compilation.cpp.s
 .PHONY : binarization_app_autogen/mocs_compilation.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+qrc_resources.o: qrc_resources.cpp.o
+.PHONY : qrc_resources.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/main.cpp.o
-.PHONY : main.cpp.o
+qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/qrc_resources.cpp.o
+.PHONY : qrc_resources.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+qrc_resources.i: qrc_resources.cpp.i
+.PHONY : qrc_resources.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/main.cpp.i
-.PHONY : main.cpp.i
+qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/qrc_resources.cpp.i
+.PHONY : qrc_resources.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+qrc_resources.s: qrc_resources.cpp.s
+.PHONY : qrc_resources.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/main.cpp.s
-.PHONY : main.cpp.s
+qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/qrc_resources.cpp.s
+.PHONY : qrc_resources.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/mainwindow.o: src/mainwindow.cpp.o
+.PHONY : src/mainwindow.o
+
+# target to build an object file
+src/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
+
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
+
+# target to preprocess a source file
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
+
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
+
+# target to generate assembly for a file
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/binarization_app.dir/build.make CMakeFiles/binarization_app.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
 
 # Help Target
 help:
@@ -227,12 +251,15 @@ help:
 	@echo "... binarization_app_autogen/mocs_compilation.o"
 	@echo "... binarization_app_autogen/mocs_compilation.i"
 	@echo "... binarization_app_autogen/mocs_compilation.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
+	@echo "... qrc_resources.o"
+	@echo "... qrc_resources.i"
+	@echo "... qrc_resources.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
 .PHONY : help
 
 

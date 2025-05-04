@@ -1,4 +1,4 @@
-/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/krzychu/Documents/Programowanie/projekty/binarization_app/mainwindow.hpp \
+/home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/6YEA5652QU/moc_mainwindow.cpp: /home/krzychu/Documents/Programowanie/projekty/binarization_app/include/mainwindow.hpp \
   /home/krzychu/Documents/Programowanie/projekty/binarization_app/build/binarization_app_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -570,7 +570,6 @@
   /usr/local/include/opencv4/opencv2/core/base.hpp \
   /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
   /usr/local/include/opencv4/opencv2/core/check.hpp \
-  /usr/local/include/opencv4/opencv2/core/core.hpp \
   /usr/local/include/opencv4/opencv2/core/cuda.hpp \
   /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
   /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
@@ -640,10 +639,8 @@
   /usr/local/include/opencv4/opencv2/flann/saving.h \
   /usr/local/include/opencv4/opencv2/flann/timer.h \
   /usr/local/include/opencv4/opencv2/highgui.hpp \
-  /usr/local/include/opencv4/opencv2/highgui/highgui.hpp \
   /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
   /usr/local/include/opencv4/opencv2/imgproc.hpp \
-  /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
   /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /usr/local/include/opencv4/opencv2/ml.hpp \
   /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
