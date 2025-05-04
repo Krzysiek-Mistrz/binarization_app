@@ -5,45 +5,54 @@
 
 QImage MainWindow::matToQImage(const cv::Mat &mat) {
     cv::Mat rgb;
-    // Konwersja BGR→RGB
+    //konwersja i tworzenie qimage
     cv::cvtColor(mat, rgb, cv::COLOR_BGR2RGB);
-    // Tworzymy QImage kopiując dane
     return QImage((const uchar*)rgb.data, rgb.cols, rgb.rows,
                   static_cast<int>(rgb.step),
                   QImage::Format_RGB888).copy();
 }
 
 void MainWindow::loadImage() {
-    QString file = QFileDialog::getOpenFileName(this, "Wybierz obraz");
+    QString file = QFileDialog::getOpenFileName(this, "Select your image");
     if(file.isEmpty()) return;
     cv::Mat img = cv::imread(file.toStdString());
-    if(img.empty()) qWarning() << "Nie udało się wczytać obrazu";
+    if(img.empty()) qWarning() << "Couldn't load image";
     src = img;
+    sliderR->setEnabled(true);
+    sliderG->setEnabled(true);
+    sliderB->setEnabled(true);
+    btnManual->setEnabled(true);
+    btnAuto->setEnabled(true);
     displayMat(src);
 }
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent) {
-    // 1) Tworzymy widżety
+    //instancje widgetow
     imageLabel = new QLabel(this);
     sliderR    = new QSlider(Qt::Horizontal, this);
     sliderG    = new QSlider(Qt::Horizontal, this);
     sliderB    = new QSlider(Qt::Horizontal, this);
-    btnLoad    = new QPushButton("Load Image", this);
+    labelR     = new QLabel("R: 0", this);
+    labelG     = new QLabel("G: 0", this);
+    labelB     = new QLabel("B: 0", this);
     btnManual  = new QPushButton("Manual", this);
     btnAuto    = new QPushButton("Auto", this);
+    btnLoad    = new QPushButton("Load Image", this);
 
-    // 2) Zakresy suwaków
     sliderR->setRange(0,255);
     sliderG->setRange(0,255);
     sliderB->setRange(0,255);
 
-    // 3) Układ
+    //ukl poziomy
     auto *controlsLayout = new QHBoxLayout;
     controlsLayout->addWidget(btnLoad);
     controlsLayout->addWidget(sliderR);
+    controlsLayout->addWidget(labelR);
     controlsLayout->addWidget(sliderG);
+    controlsLayout->addWidget(labelG);
     controlsLayout->addWidget(sliderB);
+    controlsLayout->addWidget(labelB);
     controlsLayout->addWidget(btnManual);
     controlsLayout->addWidget(btnAuto);
 
@@ -55,32 +64,55 @@ MainWindow::MainWindow(QWidget *parent)
     central->setLayout(mainLayout);
     setCentralWidget(central);
 
+    sliderR->setEnabled(false);
+    sliderG->setEnabled(false);
+    sliderB->setEnabled(false);
+    btnManual->setEnabled(false);
+    btnAuto->setEnabled(false);
+
     //laczenie sygnalow
-    connect(btnLoad, &QPushButton::clicked, this, &QMainWindow::loadImage);
-    connect(sliderR, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
-    connect(sliderG, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
-    connect(sliderB, &QSlider::valueChanged, this, &MainWindow::updateManualThresholds);
-    connect(btnAuto, &QPushButton::clicked, this, &MainWindow::computeAutoThresholds);
+    connect(btnLoad,  &QPushButton::clicked, this, &MainWindow::loadImage);           // :contentReference[oaicite:2]{index=2}
+    connect(sliderR,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
+    connect(sliderG,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
+    connect(sliderB,  &QSlider::sliderReleased, this, &MainWindow::updateManualThresholds);
+    connect(btnAuto,  &QPushButton::clicked, this, &MainWindow::computeAutoThresholds);
 }
 
 MainWindow::~MainWindow() { }
 
 void MainWindow::updateManualThresholds() {
-    std::vector<cv::Mat> ch;
-    cv::split(src, ch);
-    cv::threshold(ch[2], ch[2], sliderR->value(), 255, cv::THRESH_BINARY);
-    cv::threshold(ch[1], ch[1], sliderG->value(), 255, cv::THRESH_BINARY);
-    cv::threshold(ch[0], ch[0], sliderB->value(), 255, cv::THRESH_BINARY);
-    cv::merge(ch, processed);
+    if (src.empty()) {
+        return;
+    }    
+    int tR = sliderR->value(), tG = sliderG->value(), tB = sliderB->value();
+    labelR->setText(QString("R: %1").arg(tR));
+    labelG->setText(QString("G: %1").arg(tG));
+    labelB->setText(QString("B: %1").arg(tB));
+    cv::Mat mask;
+    cv::inRange(src,
+                cv::Scalar(tB, tG, tR),
+                cv::Scalar(255,255,255),
+                mask);
+    cv::bitwise_and(src, src, processed, mask);
     displayMat(processed);
 }
 
 void MainWindow::computeAutoThresholds() {
-    std::vector<cv::Mat> ch;
+    if (src.empty()) {
+        return;
+    }    
+    std::vector<cv::Mat> ch(3);
     cv::split(src, ch);
-    for(int i=0; i<3; ++i)
-        cv::threshold(ch[i], ch[i], 0, 255, cv::THRESH_BINARY|cv::THRESH_OTSU);
-    cv::merge(ch, processed);
+    int otsuR = cv::threshold(ch[2], ch[2], 0,255, cv::THRESH_BINARY|cv::THRESH_OTSU);
+    int otsuG = cv::threshold(ch[1], ch[1], 0,255, cv::THRESH_BINARY|cv::THRESH_OTSU);
+    int otsuB = cv::threshold(ch[0], ch[0], 0,255, cv::THRESH_BINARY|cv::THRESH_OTSU);
+    sliderR->setValue(otsuR);  sliderG->setValue(otsuG);  sliderB->setValue(otsuB);
+    labelR->setText(QString("R: %1").arg(otsuR));
+    labelG->setText(QString("G: %1").arg(otsuG));
+    labelB->setText(QString("B: %1").arg(otsuB));
+    cv::Mat mask;
+    cv::inRange(src, cv::Scalar(otsuB,otsuG,otsuR), cv::Scalar(255,255,255), mask);
+    cv::bitwise_and(src, src, processed, mask);
     displayMat(processed);
 }
 

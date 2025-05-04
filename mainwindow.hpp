@@ -34,6 +34,7 @@ private:
     cv::Mat src, processed;
     QLabel *imageLabel;
     QSlider *sliderR, *sliderG, *sliderB;
+    QLabel *labelR, *labelG, *labelB;
     QPushButton *btnManual, *btnAuto, *btnLoad;
     void displayMat(const cv::Mat &mat);
 };
